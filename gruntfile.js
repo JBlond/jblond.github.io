@@ -30,8 +30,9 @@ module.exports = function(grunt){
 				roundingPrecision: -1
 			},
 			target: {
-				expand: true,
-				src: ['css/bootstrap.min.css','css/bootstrap-theme.min.css','css/docs.min.css','css/override.css']
+				files: {
+					'css/main.css': ['css/bootstrap.min.css','css/bootstrap-theme.min.css','css/docs.min.css','css/override.css']
+				}
 			}
 		}
 	});
