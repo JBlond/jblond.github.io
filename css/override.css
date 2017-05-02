@@ -1,0 +1,4 @@
+.bs-example::after {
+	content: "";
+}
+
