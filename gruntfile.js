@@ -41,5 +41,5 @@ module.exports = function(grunt){
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.registerTask('default', 'csslint');
 	grunt.registerTask('css','cssbeautifier');
-	grunt.registerTask('build',['csslint','cssbeautifier','cssmin']);
+	grunt.registerTask('build',['csslint','cssmin']);
 };
