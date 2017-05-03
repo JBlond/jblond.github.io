@@ -3,6 +3,42 @@ module.exports = function(grunt){
 	require('time-grunt')(grunt);
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
+		jshint: {
+			options: {
+				curly: true,
+				eqeqeq: true,
+				eqnull: true,
+				browser: true,
+				latedef: true,
+				globals: {
+					jQuery: true
+				},
+				devel: true
+			},
+			uses_defaults: ['js/main.js'],
+			with_overrides: {
+				options: {
+					"browser": true,
+					"curly": true,
+					"devel": false,
+					"eqeqeq": true,
+					"eqnull": false,
+					"globals": {
+						"jQuery": true,
+						"module": true,
+						"require": true
+					},
+					"latedef": false,
+					"strict": true,
+					"undef": true,
+					"unused": true
+
+				},
+				files: {
+					src: ['js/main.js']
+				}
+			}
+		},
 		csslint: {
 			strict: {
 				options: {
@@ -36,9 +72,10 @@ module.exports = function(grunt){
 			}
 		}
 	});
-	grunt.loadNpmTasks('grunt-cssbeautifier');
 	grunt.loadNpmTasks('grunt-contrib-csslint');
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
+	grunt.loadNpmTasks('grunt-contrib-jshint');
+	grunt.loadNpmTasks('grunt-cssbeautifier');
 	grunt.registerTask('default', 'csslint');
 	grunt.registerTask('css','cssbeautifier');
 	grunt.registerTask('build',['csslint','cssmin']);

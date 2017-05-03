@@ -8,6 +8,7 @@
     "grunt-cli": ">=1.2.0",
     "grunt-contrib-csslint": ">=2.0.0",
     "grunt-contrib-cssmin": "^2.1.0",
+    "grunt-contrib-jshint": "^1.1.0",
     "grunt-cssbeautifier": ">=0.1.9",
     "time-grunt": "^1.4.0"
   },
