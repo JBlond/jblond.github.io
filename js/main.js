@@ -15,7 +15,7 @@ jQuery(document).ready(function () {
 					'<br><code>' +
 					jQuery(this)[0].description +
 					'</code> '+
-					'</p>');
+					'</p><hr>');
 				window.console.log(jQuery(this)[0].fork);
 			});
 		}
